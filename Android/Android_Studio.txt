@@ -1,0 +1,16 @@
+1.导入cocos2d-x的HelloWorld项目
+  Import project
+  选择HelloWorld项目目录
+  create project from existing sources
+  勾选HelloWorld\cocos2d\cocos\platform\android\java
+      HelloWorld\cocos2d\cocos\platform\android\java\src
+      HelloWorld\proj.android
+      HelloWorld\proj.android\src
+  取消所有的import project的Libraries
+  选择Modules：android和proj.android
+  选择SDK: Android API 19 Platform
+  选择两个项目的androidmanifest.xml
+  Finish
+  运行build_native.py
+  运行模拟器，cpu需要arm的
+
