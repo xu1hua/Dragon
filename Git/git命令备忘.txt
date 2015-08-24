@@ -1,0 +1,13 @@
+git stash 将tracked的文件stash，untracked的文件不动
+git stash list 查看stash列表
+git stash pop 将最近的stash还原
+
+git clean -df 删除untrached的文件和目录
+
+git reset --hard 把tracked的文件revert到当前版本。untraced的文件不动
+git fetch，可以将远程分支信息获取到本地，
+git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支。
+
+git submodule add 仓库地址 路径
+    删除：在“.gitmodules”文件中删除相应配置信息。然后，执行“git rm –cached ”
+    下载的工程带有submodule：git submodule update --init --recursive
