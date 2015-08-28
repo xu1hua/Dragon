@@ -8,6 +8,11 @@ git reset --hard 把tracked的文件revert到当前版本。untraced的文件不动
 git fetch，可以将远程分支信息获取到本地，
 git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支。
 
+git reset --hard origin/master #将本地的状态回退到和远程的一样　　
+
+git push origin :branchName 删除远程分支 :前面的空格表示用空来取代远程分支
+git branch -d branchName  删除本地分支，强制删除用-D
+
 git submodule add 仓库地址 路径
     删除：在“.gitmodules”文件中删除相应配置信息。然后，执行“git rm –cached ”
     下载的工程带有submodule：git submodule update --init --recursive
