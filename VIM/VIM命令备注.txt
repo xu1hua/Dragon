@@ -1,19 +1,19 @@
-�滻��
+﻿替换：
 S:
-	:s/str1/str2/ ���ַ��� str2 �滻�����״γ��ֵ��ַ��� str1
-	:s/str1/str2/g ���ַ��� str2 �滻�������г��ֵ��ַ��� str1 
+	:s/str1/str2/ 用字符串 str2 替换行中首次出现的字符串 str1
+	:s/str1/str2/g 用字符串 str2 替换行中所有出现的字符串 str1 
 
-	:n��$s/vivian/sky/ �滻�� n �п�ʼ�����һ����ÿһ�еĵ�һ�� vivian Ϊ sky 
-	:n��$s/vivian/sky/g �滻�� n �п�ʼ�����һ����ÿһ������ vivian Ϊ sky 
-		n Ϊ���֣��� n Ϊ .����ʾ�ӵ�ǰ�п�ʼ�����һ��
+	:n，$s/vivian/sky/ 替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky 
+	:n，$s/vivian/sky/g 替换第 n 行开始到最后一行中每一行所有 vivian 为 sky 
+		n 为数字，若 n 为 .，表示从当前行开始到最后一行
 
-	:%s/vivian/sky/����ͬ�� ��g/vivian/s//sky/�� �滻ÿһ�еĵ�һ�� vivian Ϊ sky
-	:%s/vivian/sky/g����ͬ�� ��g/vivian/s//sky/g�� �滻ÿһ�������� vivian Ϊ sky 
-		����ʹ�� # ��Ϊ�ָ�������ʱ�м���ֵ� / ������Ϊ�ָ��� 
+	:%s/vivian/sky/（等同于 ：g/vivian/s//sky/） 替换每一行的第一个 vivian 为 sky
+	:%s/vivian/sky/g（等同于 ：g/vivian/s//sky/g） 替换每一行中所有 vivian 为 sky 
+		可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符 
 
-	ɾ���ı��е�^M 
-	�������������ڻ��У�window���ûس����У�0A0D������ʾ��linux���ǻس���0A������ʾ����������window�ϵ��ļ�����unix����ʱ���ܻ��и�^M.��д������unix�µĹ���windows�ļ��Ļ��з���0D����shell��c���� 
-	1)ʹ�����cat filename1 | tr -d ��^V^M�� > newfile��
-	2)ʹ�����sed -e ��s/^V^M//�� filename > outputfilename.��Ҫע�������1��2���ַ����У�^V��^Mָ����Ctrl+V��Ctrl+M.�����Ҫ�ֹ��������룬������ճ����
-	3)��vi�д���������ʹ��vi���ļ���Ȼ��ESC���������������%s/^V^M//. 
+	删除文本中的^M 
+	问题描述：对于换行，window下用回车换行（0A0D）来表示，linux下是回车（0A）来表示。这样，将window上的文件拷到unix上用时，总会有个^M.请写个用在unix下的过滤windows文件的换行符（0D）的shell或c程序。 
+	1)使用命令：cat filename1 | tr -d “^V^M” > newfile；
+	2)使用命令：sed -e “s/^V^M//” filename > outputfilename.需要注意的是在1、2两种方法中，^V和^M指的是Ctrl+V和Ctrl+M.你必须要手工进行输入，而不是粘贴。
+	3)在vi中处理：首先使用vi打开文件，然后按ESC键，接着输入命令：%s/^V^M//. 
 	4):%s/^M$//g 

@@ -1,18 +1,18 @@
-git stash ½«trackedµÄÎÄ¼şstash£¬untrackedµÄÎÄ¼ş²»¶¯
-git stash list ²é¿´stashÁĞ±í
-git stash pop ½«×î½üµÄstash»¹Ô­
+ï»¿git stash å°†trackedçš„æ–‡ä»¶stashï¼Œuntrackedçš„æ–‡ä»¶ä¸åŠ¨
+git stash list æŸ¥çœ‹stashåˆ—è¡¨
+git stash pop å°†æœ€è¿‘çš„stashè¿˜åŸ
 
-git clean -df É¾³ıuntrachedµÄÎÄ¼şºÍÄ¿Â¼
+git clean -df åˆ é™¤untrachedçš„æ–‡ä»¶å’Œç›®å½•
 
-git reset --hard °ÑtrackedµÄÎÄ¼şrevertµ½µ±Ç°°æ±¾¡£untracedµÄÎÄ¼ş²»¶¯
-git fetch£¬¿ÉÒÔ½«Ô¶³Ì·ÖÖ§ĞÅÏ¢»ñÈ¡µ½±¾µØ£¬
-git checkout -b local-branchname origin/remote_branchname  ¾Í¿ÉÒÔ½«Ô¶³Ì·ÖÖ§Ó³Éäµ½±¾µØÃüÃûÎªlocal-branchname  µÄÒ»·ÖÖ§¡£
+git reset --hard æŠŠtrackedçš„æ–‡ä»¶revertåˆ°å½“å‰ç‰ˆæœ¬ã€‚untracedçš„æ–‡ä»¶ä¸åŠ¨
+git fetchï¼Œå¯ä»¥å°†è¿œç¨‹åˆ†æ”¯ä¿¡æ¯è·å–åˆ°æœ¬åœ°ï¼Œ
+git checkout -b local-branchname origin/remote_branchname  å°±å¯ä»¥å°†è¿œç¨‹åˆ†æ”¯æ˜ å°„åˆ°æœ¬åœ°å‘½åä¸ºlocal-branchname  çš„ä¸€åˆ†æ”¯ã€‚
 
-git reset --hard origin/master #½«±¾µØµÄ×´Ì¬»ØÍËµ½ºÍÔ¶³ÌµÄÒ»Ñù¡¡¡¡
+git reset --hard origin/master #å°†æœ¬åœ°çš„çŠ¶æ€å›é€€åˆ°å’Œè¿œç¨‹çš„ä¸€æ ·ã€€ã€€
 
-git push origin :branchName É¾³ıÔ¶³Ì·ÖÖ§ :Ç°ÃæµÄ¿Õ¸ñ±íÊ¾ÓÃ¿ÕÀ´È¡´úÔ¶³Ì·ÖÖ§
-git branch -d branchName  É¾³ı±¾µØ·ÖÖ§£¬Ç¿ÖÆÉ¾³ıÓÃ-D
+git push origin :branchName åˆ é™¤è¿œç¨‹åˆ†æ”¯ :å‰é¢çš„ç©ºæ ¼è¡¨ç¤ºç”¨ç©ºæ¥å–ä»£è¿œç¨‹åˆ†æ”¯
+git branch -d branchName  åˆ é™¤æœ¬åœ°åˆ†æ”¯ï¼Œå¼ºåˆ¶åˆ é™¤ç”¨-D
 
-git submodule add ²Ö¿âµØÖ· Â·¾¶
-    É¾³ı£ºÔÚ¡°.gitmodules¡±ÎÄ¼şÖĞÉ¾³ıÏàÓ¦ÅäÖÃĞÅÏ¢¡£È»ºó£¬Ö´ĞĞ¡°git rm ¨Ccached ¡±
-    ÏÂÔØµÄ¹¤³Ì´øÓĞsubmodule£ºgit submodule update --init --recursive
+git submodule add ä»“åº“åœ°å€ è·¯å¾„
+    åˆ é™¤ï¼šåœ¨â€œ.gitmodulesâ€æ–‡ä»¶ä¸­åˆ é™¤ç›¸åº”é…ç½®ä¿¡æ¯ã€‚ç„¶åï¼Œæ‰§è¡Œâ€œgit rm â€“cached â€
+    ä¸‹è½½çš„å·¥ç¨‹å¸¦æœ‰submoduleï¼šgit submodule update --init --recursive
